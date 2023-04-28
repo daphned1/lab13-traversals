@@ -134,9 +134,8 @@ public class BinarySearchTree<T extends Comparable<T>> {
 		Stack<BSTNode<T>> pre = new Stack<BSTNode<T>>();
 		pre.push(root);
 		while (pre.size() > 0) {
-			BSTNode<T> currNode = pre.peek();
+			BSTNode<T> currNode = pre.pop();;
 			System.out.println(currNode);
-			pre.pop();
 			
 			if (currNode.rightChild != null) {
 				pre.push(currNode.rightChild);
